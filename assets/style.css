@@ -1,0 +1,236 @@
+html {
+    background: url(background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    font: 14px/21px "Open Sans", sans-serif;
+    overflow: hidden;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.row {
+    margin: 0;
+}
+
+.overlay:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .2);
+}
+
+/* RIGHT CONTENT */
+
+#content-wrap {
+    display: block;
+    position: absolute;
+    float: none;
+    width: 50%;
+    height: 100vh;
+    background-image: url('pattern.jpg');
+    background-repeat: repeat;
+    left: 25%;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    outline: none;
+    z-index: 3;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+}
+
+.main-content {
+    display: block;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-avatar {
+    display: block;
+    position: relative;
+    margin: 36px auto 18px;
+    float: none;
+    border: 2px solid #d7d7d7;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+}
+
+.main-content h2 {
+    font-family: "Poiret One", sans-serif;
+    font-size: 40px;
+    margin: 0 0 18px;
+    padding: 0;
+}
+
+.main-content h2:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    float: none;
+    padding: 0 0 18px;
+    border-bottom: 1px dashed #424242;
+    width: 140px;
+}
+
+.main-content p {
+    display: block;
+    margin: 0 auto 18px;
+    padding: 0;
+    float: none;
+    text-align: center;
+    width: 60%;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 27px;
+}
+
+.main-content p span {
+    font-weight: normal;
+}
+
+.main-content p:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    float: none;
+    padding: 0 0 18px;
+    border-bottom: 1px dashed #424242;
+    width: 140px;
+}
+
+.single-page .main-content p:after {
+    display: none;
+}
+
+/* SOCIAL */
+
+.social-icons {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    bottom: 0px;
+    height: 50px;
+}
+
+.social-icons ul {
+    display: block;
+    margin: 16px auto 0;
+    padding: 0;
+    float: none;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.social-icons ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    list-style: none;
+}
+
+.social-icons ul li a {
+    display: inline-block;
+    margin: 14px 8px;
+    padding: 0;
+    position: relative;
+    list-style: none;
+    color: #cdcdcd;
+    font-size: 20px;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.social-icons ul li a:after {
+    content: "";
+    display: block;
+    margin: -29px 0 0;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #cdcdcd;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+.social-icons ul li a:hover {
+    color: #424242;
+}
+
+.social-icons ul li a:hover:after {
+    border-color: #424242;
+}
+
+@media only screen and (min-width: 1442px) and (max-width: 1610px) {
+    .iconbox ul li i {
+        height: 110px;
+    }
+}
+
+@media only screen and (min-width: 1202px) and (max-width: 1441px) {
+    .main-content p {
+        font-size: 16px;
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1198px) {
+    .main-content h2 {
+        font-size: 36px;
+    }
+
+    .main-content p {
+        width: 70%;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+    #content-wrap {
+        width: 100%;
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    #content-wrap {
+        width: 100%;
+        left: 0px;
+    }
+}
