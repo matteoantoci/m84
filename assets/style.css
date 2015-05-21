@@ -7,35 +7,27 @@ html {
 }
 
 body {
-    font: 14px/21px "Open Sans", sans-serif;
-    overflow: hidden;
+    font: 1.4em "Open Sans", sans-serif;
     font-weight: 300;
+    height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1{
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
     line-height: 1.5;
 }
 
-.row {
-    margin: 0;
+h2,
+h3{
+    font-weight: 300;
+    line-height: 1;
+    font-size: .5em;
 }
 
-.overlay:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, .2);
+.row {
+    margin: 0;
 }
 
 /* RIGHT CONTENT */
@@ -44,15 +36,15 @@ h6 {
     display: block;
     position: absolute;
     float: none;
-    width: 50%;
-    height: 100vh;
+    width: 100%;
+    left: 0px;
     background-image: url('pattern.jpg');
     background-repeat: repeat;
-    left: 25%;
     margin: 0;
-    padding: 0;
+    padding: 3em 0;
     overflow-y: hidden;
     outline: none;
+    min-height: 100%;
     z-index: 3;
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
@@ -73,47 +65,53 @@ h6 {
 .profile-avatar {
     display: block;
     position: relative;
-    margin: 36px auto 18px;
+    margin: 0 auto .5em;
     float: none;
     border: 2px solid #d7d7d7;
     border-radius: 50%;
     width: 180px;
     height: 180px;
     overflow: hidden;
+    font-size: 3em;
 }
 
-.main-content h2 {
+.profile-avatar:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .2);
+}
+
+.main-content .title {
     font-family: "Poiret One", sans-serif;
-    font-size: 40px;
-    margin: 0 0 18px;
+    font-size: 3em;
+    margin: 0 0 .5em;
     padding: 0;
 }
 
-.main-content h2:after {
+.main-content .title:after {
     content: "";
     display: block;
     margin: 0 auto;
     float: none;
-    padding: 0 0 18px;
+    padding: 0 0 .5em;
     border-bottom: 1px dashed #424242;
     width: 140px;
 }
 
 .main-content p {
     display: block;
-    margin: 0 auto 18px;
+    margin: 0 auto .5em;
     padding: 0;
     float: none;
     text-align: center;
-    width: 60%;
+    width: 70%;
     font-weight: 300;
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 27px;
-}
-
-.main-content p span {
-    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.5;
 }
 
 .main-content p:after {
@@ -121,25 +119,23 @@ h6 {
     display: block;
     margin: 0 auto;
     float: none;
-    padding: 0 0 18px;
+    padding: 0 0 .5em;
     border-bottom: 1px dashed #424242;
     width: 140px;
+    font-size: 3em;
 }
 
 /* SOCIAL */
 
 .social-icons {
     display: block;
-    margin: 0 auto;
+    margin: 3em auto 1em;
     padding: 0;
-    position: relative;
-    bottom: 0px;
-    height: 50px;
 }
 
 .social-icons ul {
     display: block;
-    margin: 16px auto 0;
+    margin: .5em auto 0;
     padding: 0;
     float: none;
     position: relative;
@@ -157,12 +153,12 @@ h6 {
 
 .social-icons ul li a {
     display: inline-block;
-    margin: 14px 8px;
+    margin: 0 .5em;
     padding: 0;
     position: relative;
     list-style: none;
     color: #cdcdcd;
-    font-size: 20px;
+    font-size: 2em;
     -webkit-transition: all .2s linear;
     -o-transition: all .2s linear;
     transition: all .2s linear;
@@ -171,10 +167,10 @@ h6 {
 .social-icons ul li a:after {
     content: "";
     display: block;
-    margin: -29px 0 0;
+    margin: -1.6em 0 0;
     padding: 0;
-    width: 35px;
-    height: 35px;
+    width: 2em;
+    height: 2em;
     border: 1px solid #cdcdcd;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -193,40 +189,16 @@ h6 {
     border-color: #424242;
 }
 
-@media only screen and (min-width: 1442px) and (max-width: 1610px) {
-    .iconbox ul li i {
-        height: 110px;
-    }
-}
-
-@media only screen and (min-width: 1202px) and (max-width: 1441px) {
-    .main-content p {
-        font-size: 16px;
-        width: 70%;
-    }
-}
-
-@media only screen and (min-width: 993px) and (max-width: 1198px) {
-    .main-content h2 {
-        font-size: 36px;
-    }
-
-    .main-content p {
-        width: 70%;
-        font-size: 16px;
-    }
-}
-
-@media only screen and (min-width: 767px) and (max-width: 992px) {
+@media only screen and (min-width: 767px)  {
     #content-wrap {
         width: 100%;
-        left: 0px;
+        left: 0;
     }
 }
 
-@media only screen and (max-width: 766px) {
+@media only screen and (min-width: 993px){
     #content-wrap {
-        width: 100%;
-        left: 0px;
+        width: 50%;
+        left: 25%;
     }
 }
